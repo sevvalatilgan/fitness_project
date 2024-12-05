@@ -5,7 +5,7 @@ builder.Services.AddControllersWithViews();
 
 // IoC Container:
 string connectionString = "Host=localhost;Database=fitness;Username=sevvalatilgan;Password=123456";
-builder.Services.AddDbContext<DbContext>(options => options.UseNpgsql(connectionString));
+builder.Services.AddDbContext<DbContext>(options => options.UseNpgPostgresql(connectionString));
 
 
 var app = builder.Build();
