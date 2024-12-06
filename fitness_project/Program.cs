@@ -1,11 +1,16 @@
+using BLL.DAL;
+using BLL.Services;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 // IoC Container:
-string connectionString = "Host=localhost;Database=fitness;Username=sevvalatilgan;Password=123456";
-builder.Services.AddDbContext<DbContext>(options => options.UseNpgPostgresql(connectionString));
+var connectionString = "Host=localhost;Database=fitness;Username=postgres;Password=454545";
+builder.Services.AddDbContext<Db>(options => options.UseNpgsql(connectionString));
+builder.Services.AddScoped<IEquipmentService, EquipmentService>();
 
 
 var app = builder.Build();

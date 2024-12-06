@@ -1,9 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using BLL.DAL;
 
-namespace BLL.DAL
+namespace BLL.Models
 {
-    public class Equipment
+    public class EquipmentModel
     {
+        public Equipment Record { get; set; }
+
         public int Id { get; set; }
 
         [Required]
@@ -14,8 +22,5 @@ namespace BLL.DAL
 
         [Range(0, 1000)]
         public int Quantity { get; set; }
-
-        public int? TrainerId { get; set; }
-        public Trainer Trainer { get; set; }
     }
 }

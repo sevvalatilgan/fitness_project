@@ -1,3 +1,4 @@
+#nullable enable
 namespace fitness_project.Models;
 
 public class ErrorViewModel

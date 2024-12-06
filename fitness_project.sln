@@ -1,5 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fitness_project", "fitness_project\fitness_project.csproj", "{D6202F54-DDE7-44AF-955B-BAEEEBAFA9CC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{58A26C99-B9AA-4218-87BE-C9837F67BA3B}"
@@ -18,5 +21,8 @@ Global
 		{58A26C99-B9AA-4218-87BE-C9837F67BA3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58A26C99-B9AA-4218-87BE-C9837F67BA3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58A26C99-B9AA-4218-87BE-C9837F67BA3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

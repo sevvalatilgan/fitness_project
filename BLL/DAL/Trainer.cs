@@ -17,8 +17,10 @@ namespace BLL.DAL
 
         [Required]
         [StringLength(50)]
-        public string Specialization { get; set; } // Örn: Yoga, Ağırlık, Kardiyo
+        public string Specialization { get; set; }
 
         public ICollection<Session> Sessions { get; set; }
+
+        public ICollection<Equipment> Equipments { get; set; }
     }
 }

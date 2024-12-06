@@ -1,4 +1,4 @@
-#nullable disable
+
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -60,6 +60,14 @@ namespace BLL.DAL
                     .WithMany(p => p.Schedules)
                     .HasForeignKey(d => d.SessionId)
                     .OnDelete(DeleteBehavior.ClientSetNull);
+            });
+
+            modelBuilder.Entity<Equipment>(entity =>
+            {
+                entity.HasOne(d => d.Trainer)
+                    .WithMany(p => p.Equipments)
+                    .HasForeignKey(d => d.TrainerId)
+                    .OnDelete(DeleteBehavior.SetNull);
             });
 
             OnModelCreatingPartial(modelBuilder);
